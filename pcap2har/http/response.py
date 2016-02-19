@@ -60,7 +60,7 @@ class Response(message.Message):
             # uncompress body if necessary
             self.handle_compression()
             # try to get out unicode
-            self.handle_text()
+            # self.handle_text()
 
     def clear_body(self):
         '''

@@ -34,9 +34,9 @@ class FlowBuilder(object):
         if srcport == 5228 or dstport == 5228:
             logging.warning('hpvroom packets are ignored')
             return
-        if srcport == 443 or dstport == 443:
-            logging.warning('https packets are ignored')
-            return
+        #if srcport == 443 or dstport == 443:
+        #    logging.warning('https packets are ignored')
+        #    return
         # sort the packet into a tcp.Flow in flowdict. If NewFlowError is
         # raised, the existing flow doesn't want any more packets, so we
         # should start a new flow.

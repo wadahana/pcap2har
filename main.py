@@ -25,7 +25,7 @@ parser = optparse.OptionParser(
     usage='usage: %prog inputfile outputfile'
 )
 parser.add_option('--no-pages', action='store_false',
-                  dest='pages', default=True)
+                  dest='pages', default=False)
 parser.add_option('-d', '--drop-bodies', action='store_true',
                   dest='drop_bodies', default=False)
 parser.add_option('-k', '--keep-unfulfilled-requests', action='store_true',

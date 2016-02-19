@@ -38,10 +38,10 @@ def HTTPRequestJsonRepr(self):
         'method': self.msg.method,
         'url': self.url,
         'httpVersion': 'HTTP/' + self.msg.version,
-        'cookies': [],
-        'queryString': query_json_repr(self.query),
+        #'cookies': [],
+        #'queryString': query_json_repr(self.query),
         'headersSize': -1,
-        'headers': header_json_repr(self.msg.headers),
+        #'headers': header_json_repr(self.msg.headers),
         'bodySize': len(self.msg.body),
     }
 http.Request.json_repr = HTTPRequestJsonRepr
@@ -64,12 +64,12 @@ def HTTPResponseJsonRepr(self):
         'status': int(self.msg.status),
         'statusText': self.msg.reason,
         'httpVersion': 'HTTP/' + self.msg.version,
-        'cookies': [],
+        #'cookies': [],
         'headersSize': -1,
         'bodySize': self.raw_body_length,
         'redirectURL': self.msg.headers['location'] if 'location' in self.msg.headers else '',
-        'headers': header_json_repr(self.msg.headers),
-        'content': content,
+        #'headers': header_json_repr(self.msg.headers),
+        #'content': content,
     }
 http.Response.json_repr = HTTPResponseJsonRepr
 
