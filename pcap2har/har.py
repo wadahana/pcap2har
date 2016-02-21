@@ -69,7 +69,7 @@ def HTTPResponseJsonRepr(self):
         'bodySize': self.raw_body_length,
         'redirectURL': self.msg.headers['location'] if 'location' in self.msg.headers else '',
         #'headers': header_json_repr(self.msg.headers),
-        #'content': content,
+        'content': content,
     }
 http.Response.json_repr = HTTPResponseJsonRepr
 
